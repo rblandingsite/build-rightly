@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Restaurant Builders by Boulder Builders" },
+      { name: "description", content: "Southern California Restaurant Contractors" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Restaurant Builders by Boulder Builders" },
+      { property: "og:description", content: "Southern California Restaurant Contractors" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Restaurant Builders by Boulder Builders" },
+      { name: "twitter:description", content: "Southern California Restaurant Contractors" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/cCHflPyZMtUM1mdhSjfWBkg0hvk2/social-images/social-1781401519669-boulder_logo_new.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/cCHflPyZMtUM1mdhSjfWBkg0hvk2/social-images/social-1781401519669-boulder_logo_new.webp" },
     ],
     links: [
       {
