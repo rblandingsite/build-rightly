@@ -220,7 +220,7 @@ function VideoSection() {
             {playing ? (
               <iframe
                 className="h-full w-full"
-                src="about:blank"
+                src="https://www.youtube.com/embed/fPEL4lD4ISk?autoplay=1&rel=0"
                 title="About Restaurant Builders"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
