@@ -1,36 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Restaurant Builders — Southern California Restaurant Contractors" },
-      {
-        name: "description",
-        content:
-          "Restaurant Builders specializes in new restaurant construction, remodels, tenant improvements, and build-outs throughout Southern California. Backed by Boulder Builders.",
-      },
-      { property: "og:title", content: "Restaurant Builders — Southern California Restaurant Contractors" },
-      {
-        property: "og:description",
-        content:
-          "New restaurant construction, remodels, and tenant improvements across Santa Clarita, Los Angeles, Ventura, and Orange County.",
-      },
-      { property: "og:type", content: "website" },
-    ],
-    links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap",
-      },
-    ],
-  }),
-  component: Index,
-});
-
-function Index() {
+export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
@@ -140,7 +110,6 @@ function Hero() {
           </div>
         </div>
 
-        {/* Right column — intentionally minimal */}
         <aside className="hidden lg:col-span-5 lg:block">
           <div className="relative h-full min-h-[520px] border-l border-hairline pl-12">
             <div className="flex h-full flex-col justify-between">
@@ -305,36 +274,12 @@ function Authority() {
 /* ---------------- Services ---------------- */
 
 const services = [
-  {
-    n: "01",
-    title: "Design-Build Coordination",
-    body: "A collaborative approach that streamlines communication and helps reduce unnecessary delays.",
-  },
-  {
-    n: "02",
-    title: "Construction Management",
-    body: "Oversight of scheduling, quality control, budgeting, and project execution.",
-  },
-  {
-    n: "03",
-    title: "Restaurant Build-Outs & Renovations",
-    body: "Construction services for new restaurants, remodels, rebrands, and tenant improvements.",
-  },
-  {
-    n: "04",
-    title: "Kitchen Construction & Remodeling",
-    body: "Commercial kitchen environments designed to support workflow, safety, and efficiency.",
-  },
-  {
-    n: "05",
-    title: "Interior & Exterior Improvements",
-    body: "Construction improvements that support both operational requirements and brand presentation.",
-  },
-  {
-    n: "06",
-    title: "Tenant Improvements",
-    body: "Restaurant-specific tenant improvement projects for new and existing commercial spaces.",
-  },
+  { n: "01", title: "Design-Build Coordination", body: "A collaborative approach that streamlines communication and helps reduce unnecessary delays." },
+  { n: "02", title: "Construction Management", body: "Oversight of scheduling, quality control, budgeting, and project execution." },
+  { n: "03", title: "Restaurant Build-Outs & Renovations", body: "Construction services for new restaurants, remodels, rebrands, and tenant improvements." },
+  { n: "04", title: "Kitchen Construction & Remodeling", body: "Commercial kitchen environments designed to support workflow, safety, and efficiency." },
+  { n: "05", title: "Interior & Exterior Improvements", body: "Construction improvements that support both operational requirements and brand presentation." },
+  { n: "06", title: "Tenant Improvements", body: "Restaurant-specific tenant improvement projects for new and existing commercial spaces." },
 ];
 
 function Services() {
@@ -380,26 +325,10 @@ function Services() {
 /* ---------------- Process ---------------- */
 
 const steps = [
-  {
-    n: "Step 01",
-    title: "Consultation & Project Review",
-    body: "We review the concept, location, goals, and project requirements.",
-  },
-  {
-    n: "Step 02",
-    title: "Pre-Construction & Planning",
-    body: "Coordination, scheduling, permitting, and project preparation.",
-  },
-  {
-    n: "Step 03",
-    title: "Construction & Oversight",
-    body: "Active management, trade coordination, quality control, and communication.",
-  },
-  {
-    n: "Step 04",
-    title: "Final Inspection & Turnover",
-    body: "Project completion, inspections, and readiness for opening.",
-  },
+  { n: "Step 01", title: "Consultation & Project Review", body: "We review the concept, location, goals, and project requirements." },
+  { n: "Step 02", title: "Pre-Construction & Planning", body: "Coordination, scheduling, permitting, and project preparation." },
+  { n: "Step 03", title: "Construction & Oversight", body: "Active management, trade coordination, quality control, and communication." },
+  { n: "Step 04", title: "Final Inspection & Turnover", body: "Project completion, inspections, and readiness for opening." },
 ];
 
 function Process() {
