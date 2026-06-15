@@ -1,8 +1,21 @@
 import { useState } from "react";
-import logosAsset from "@/assets/restaurant-logos.png.asset.json";
 
 const PHONE_DISPLAY = "661.777.5000";
 const PHONE_HREF = "tel:6617775000";
+
+const BRANDS: { name: string; domain: string }[] = [
+  { name: "McDonald's", domain: "mcdonalds.com" },
+  { name: "KFC", domain: "kfc.com" },
+  { name: "Wendy's", domain: "wendys.com" },
+  { name: "El Pollo Loco", domain: "elpolloloco.com" },
+  { name: "Baskin-Robbins", domain: "baskinrobbins.com" },
+  { name: "Yogurtland", domain: "yogurtland.com" },
+  { name: "Togo's", domain: "togos.com" },
+  { name: "Pita Pit", domain: "pitapitusa.com" },
+  { name: "Extreme Pita", domain: "extremepita.com" },
+  { name: "Taco Del Mar", domain: "tacodelmar.com" },
+  { name: "Una Mas", domain: "unamas.com" },
+];
 
 export default function Home() {
   return (
