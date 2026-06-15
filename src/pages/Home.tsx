@@ -357,25 +357,39 @@ function LogoMarquee() {
       }}
     >
       <div className="flex w-max animate-marquee items-center gap-16 px-8 lg:gap-24">
-        {loop.map((b, i) => (
-          <div
-            key={`${b.domain}-${i}`}
-            className="flex h-20 w-40 shrink-0 items-center justify-center lg:h-24 lg:w-48"
-            title={b.name}
-          >
-            <img
-              src={`https://logo.clearbit.com/${b.domain}?size=256`}
-              alt={`${b.name} logo — restaurant client of Boulder Builders`}
-              className="max-h-full max-w-full select-none object-contain grayscale-0 transition-all duration-300"
-              loading="lazy"
-              draggable={false}
-              onError={(e) => {
-                const t = e.currentTarget;
-                t.outerHTML = `<span class="font-display text-xl tracking-tight text-primary">${b.name}</span>`;
-              }}
-            />
-          </div>
-        ))}
+        {loop.map((b, i) => {
+          const sources = [
+            `https://www.google.com/s2/favicons?domain=${b.domain}&sz=256`,
+            `https://icons.duckduckgo.com/ip3/${b.domain}.ico`,
+            `https://icon.horse/icon/${b.domain}`,
+          ];
+          return (
+            <div
+              key={`${b.domain}-${i}`}
+              className="flex h-20 w-40 shrink-0 items-center justify-center lg:h-24 lg:w-48"
+              title={b.name}
+            >
+              <img
+                src={sources[0]}
+                data-step="0"
+                alt={`${b.name} logo — restaurant client of Boulder Builders`}
+                className="max-h-full max-w-full select-none object-contain transition-all duration-300"
+                loading="lazy"
+                draggable={false}
+                onError={(e) => {
+                  const t = e.currentTarget;
+                  const step = Number(t.dataset.step ?? "0") + 1;
+                  if (step < sources.length) {
+                    t.dataset.step = String(step);
+                    t.src = sources[step];
+                  } else {
+                    t.outerHTML = `<span class="font-display text-xl tracking-tight text-primary">${b.name}</span>`;
+                  }
+                }}
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
