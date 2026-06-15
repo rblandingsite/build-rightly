@@ -1,4 +1,8 @@
 import { useState } from "react";
+import logosAsset from "@/assets/restaurant-logos.png.asset.json";
+
+const PHONE_DISPLAY = "661.777.5000";
+const PHONE_HREF = "tel:6617775000";
 
 export default function Home() {
   return (
@@ -8,6 +12,7 @@ export default function Home() {
         <Hero />
         <VideoSection />
         <Authority />
+        <BrandsSection />
         <Services />
         <Process />
         <Differentiators />
@@ -35,22 +40,22 @@ function Header() {
 
         <div className="hidden text-center lg:block">
           <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-            Southern California Restaurant Contractors
+            Los Angeles Restaurant Contractors
           </span>
         </div>
 
         <div className="flex items-center gap-6">
           <a
-            href="tel:6617775000"
+            href={PHONE_HREF}
             className="hidden text-sm font-medium tracking-tight text-foreground transition-colors hover:text-secondary md:inline"
           >
-            661.777.5000
+            {PHONE_DISPLAY}
           </a>
           <a
-            href="#consultation"
+            href={PHONE_HREF}
             className="inline-flex items-center justify-center bg-primary px-5 py-3 text-[12px] font-medium uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-secondary"
           >
-            Request Consultation
+            Call for a Free Estimate
           </a>
         </div>
       </div>
@@ -65,47 +70,51 @@ function Hero() {
     <section id="top" className="relative border-b border-hairline">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 py-24 lg:grid-cols-12 lg:gap-16 lg:px-12 lg:py-36">
         <div className="lg:col-span-7">
-          <p className="eyebrow">Est. Southern California</p>
-          <h1 className="mt-8 font-display text-5xl leading-[1.02] tracking-tight text-primary sm:text-6xl lg:text-[88px]">
+          <p className="eyebrow">Serving Los Angeles County Since 1987</p>
+          <h1 className="mt-8 font-display text-5xl leading-[1.02] tracking-tight text-primary sm:text-6xl lg:text-[80px]">
+            Los Angeles
+            <br />
             Restaurant
             <br />
-            Builders.
+            <span className="italic text-secondary">Contractors.</span>
           </h1>
           <p className="mt-8 max-w-xl font-display text-xl italic text-secondary sm:text-2xl">
-            New Restaurant Construction &amp; Remodels
+            New Restaurant Construction, Remodels &amp; Tenant Improvements
           </p>
 
           <div className="mt-10 flex items-center gap-4 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-            <span>Santa Clarita</span>
+            <span>Los Angeles</span>
             <span className="text-hairline">/</span>
-            <span>Los Angeles County</span>
+            <span>Santa Clarita</span>
             <span className="text-hairline">/</span>
             <span>Southern California</span>
           </div>
 
           <div className="mt-12 max-w-xl space-y-5 text-[15px] leading-[1.75] text-foreground/80">
             <p>
-              Restaurant construction requires more than building walls and finishes.
-              It requires coordination, regulatory awareness, and an understanding of
-              how space, workflow, and guest experience come together in a working
-              restaurant.
+              Restaurant Builders is the restaurant-focused division of Boulder
+              Builders — one of the most trusted restaurant construction companies
+              serving Los Angeles County and Southern California. National brands,
+              franchise operators, and independent restaurateurs rely on us to deliver
+              on schedule and on budget.
             </p>
             <p>
-              Restaurant Builders specializes in new restaurant construction, restaurant
-              remodels, tenant improvements, and restaurant build-outs for owners,
-              operators, and developers throughout Southern California.
+              From ground-up new restaurant construction to full remodels, kitchen
+              build-outs, and multi-unit tenant improvements, our project managers
+              bring deep restaurant-specific experience to every phase of the
+              construction process.
             </p>
           </div>
 
           <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
             <a
-              href="#consultation"
+              href={PHONE_HREF}
               className="inline-flex items-center justify-center bg-primary px-7 py-4 text-[12px] font-medium uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:bg-secondary"
             >
-              Request a Build Consultation
+              Call {PHONE_DISPLAY} — Free Estimate
             </a>
             <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-              Timelines · Budget Planning · Permit Readiness
+              On-Time · On-Budget · Permit Ready
             </p>
           </div>
         </div>
@@ -119,10 +128,11 @@ function Hero() {
                   {[
                     "01 — About",
                     "02 — Capabilities",
-                    "03 — Services",
-                    "04 — Approach",
-                    "05 — Known For",
-                    "06 — Consultation",
+                    "03 — Brands We've Built For",
+                    "04 — Services",
+                    "05 — Approach",
+                    "06 — Known For",
+                    "07 — Free Estimate",
                   ].map((i) => (
                     <li key={i} className="font-display tracking-tight">
                       {i}
@@ -141,9 +151,9 @@ function Hero() {
                     </p>
                   </div>
                   <div>
-                    <p className="eyebrow">Operated By</p>
+                    <p className="eyebrow">Building Since</p>
                     <p className="mt-2 font-display text-lg text-primary">
-                      Boulder<br />Builders
+                      1987
                     </p>
                   </div>
                 </div>
@@ -172,14 +182,14 @@ function VideoSection() {
           </div>
           <div className="space-y-5 text-[15px] leading-[1.75] text-foreground/80 lg:col-span-7 lg:col-start-6">
             <p>
-              This brief introduction provides an overview of who we are, how we work,
-              and our approach to restaurant construction projects throughout Southern
-              California.
+              A short introduction to how we approach restaurant construction in
+              Los Angeles — our team, our process, and what it looks like to
+              partner with a contractor that builds restaurants for a living.
             </p>
             <p>
-              Restaurant Builders focuses exclusively on restaurant construction and
-              remodels and is backed by the experience of Boulder Builders, a licensed
-              California general contractor.
+              Restaurant Builders is operated by Boulder Builders, a licensed
+              California general contractor that has been delivering restaurant
+              projects across LA County since 1987.
             </p>
           </div>
         </div>
@@ -241,28 +251,31 @@ function Authority() {
           <div className="lg:col-span-5">
             <p className="eyebrow">02 — Capabilities</p>
             <h2 className="mt-6 font-display text-4xl leading-[1.05] tracking-tight text-primary sm:text-5xl lg:text-6xl">
-              Building<br />
-              Restaurants<br />
-              <span className="italic text-secondary">That Work.</span>
+              Trusted<br />
+              Restaurant<br />
+              <span className="italic text-secondary">Builders in LA.</span>
             </h2>
           </div>
 
           <div className="space-y-6 text-[16px] leading-[1.8] text-foreground/80 lg:col-span-6 lg:col-start-7">
             <p>
-              Every restaurant space requires careful coordination. Kitchen layouts,
-              equipment placement, front-of-house flow, building requirements, and
-              inspection readiness all directly impact how a restaurant performs once
-              its doors open.
+              As one of the leading restaurant building contractors in Los Angeles
+              County, our project managers are specialists — not generalists. They
+              understand the realities of restaurant construction: kitchen workflow,
+              hood and grease systems, Title 24, ADA, health-department sign-off,
+              and the sequencing that keeps an opening date intact.
             </p>
             <p>
-              Restaurant Builders approaches each project with a practical understanding
-              of restaurant operations, construction sequencing, permitting requirements,
-              and long-term functionality.
+              On every Los Angeles restaurant project, our project manager is the
+              first on site and the last to leave. Weekly progress photos, reports,
+              and submittals keep owners and architects fully informed at every
+              phase of the construction process.
             </p>
             <p>
-              Our goal is to help create restaurant environments that operate efficiently,
-              support staff workflow, meet regulatory requirements, and reflect the
-              vision behind the brand.
+              Whether you're a national franchise rolling out a new location or a
+              local restaurateur opening your first concept, our goal is the same:
+              far exceed the expectations of our clients, because we understand
+              what your investment represents.
             </p>
           </div>
         </div>
@@ -271,26 +284,99 @@ function Authority() {
   );
 }
 
+/* ---------------- Brands Carousel ---------------- */
+
+function BrandsSection() {
+  return (
+    <section className="border-b border-hairline bg-muted">
+      <div className="mx-auto max-w-[1400px] px-6 py-24 lg:px-12 lg:py-32">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <p className="eyebrow">03 — Brands We've Built For</p>
+            <h2 className="mt-6 font-display text-4xl leading-tight tracking-tight text-primary sm:text-5xl">
+              Built for Brands That<br />
+              <span className="italic text-secondary">Can't Miss a Date.</span>
+            </h2>
+          </div>
+          <div className="space-y-5 text-[15px] leading-[1.75] text-foreground/80 lg:col-span-6 lg:col-start-7">
+            <p>
+              National brands, franchise groups, and independent restaurateurs across
+              Los Angeles County have trusted Boulder Builders to deliver restaurant
+              construction projects on time and on budget.
+            </p>
+            <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+              These are just a few of the restaurants we have worked with:
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-14 lg:mt-20">
+          <LogoMarquee />
+        </div>
+
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-6 border-t border-hairline pt-8">
+          <p className="max-w-xl text-[14px] leading-[1.7] text-foreground/70">
+            Planning a new Los Angeles restaurant build, remodel, or multi-unit
+            rollout? Speak directly with a project manager for a free estimate.
+          </p>
+          <a
+            href={PHONE_HREF}
+            className="inline-flex items-center justify-center bg-primary px-7 py-4 text-[12px] font-medium uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:bg-secondary"
+          >
+            Call {PHONE_DISPLAY}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function LogoMarquee() {
+  return (
+    <div
+      className="relative overflow-hidden border-y border-hairline bg-white py-8"
+      style={{
+        maskImage:
+          "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+        WebkitMaskImage:
+          "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+      }}
+    >
+      <div className="flex w-max animate-marquee items-center gap-16">
+        {[0, 1].map((dup) => (
+          <img
+            key={dup}
+            src={logosAsset.url}
+            alt="Restaurant brands Boulder Builders has built for, including KFC, McDonald's, Baskin-Robbins, Wendy's, El Pollo Loco, Yogurtland, Togo's, Taco Del Mar, Pita Pit, Extreme Pita, and Una Mas"
+            className="h-32 w-auto select-none object-contain lg:h-40"
+            draggable={false}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /* ---------------- Services ---------------- */
 
 const services = [
-  { n: "01", title: "Design-Build Coordination", body: "A collaborative approach that streamlines communication and helps reduce unnecessary delays." },
-  { n: "02", title: "Construction Management", body: "Oversight of scheduling, quality control, budgeting, and project execution." },
-  { n: "03", title: "Restaurant Build-Outs & Renovations", body: "Construction services for new restaurants, remodels, rebrands, and tenant improvements." },
-  { n: "04", title: "Kitchen Construction & Remodeling", body: "Commercial kitchen environments designed to support workflow, safety, and efficiency." },
-  { n: "05", title: "Interior & Exterior Improvements", body: "Construction improvements that support both operational requirements and brand presentation." },
-  { n: "06", title: "Tenant Improvements", body: "Restaurant-specific tenant improvement projects for new and existing commercial spaces." },
+  { n: "01", title: "Design-Build Coordination", body: "A collaborative approach that streamlines communication between owner, architect, and trades to keep your Los Angeles restaurant project moving." },
+  { n: "02", title: "Construction Management", body: "Hands-on oversight of scheduling, quality control, budgeting, and execution from mobilization through final sign-off." },
+  { n: "03", title: "Restaurant Build-Outs & Renovations", body: "New restaurant construction, remodels, rebrands, and tenant improvements across Los Angeles County." },
+  { n: "04", title: "Commercial Kitchen Construction", body: "Kitchen environments engineered for workflow, code compliance, and the realities of high-volume restaurant service." },
+  { n: "05", title: "Interior & Exterior Improvements", body: "Construction improvements that protect your brand and support day-to-day restaurant operations." },
+  { n: "06", title: "Franchise & Multi-Unit Rollouts", body: "Repeatable, prototype-accurate restaurant construction for franchise operators and hospitality groups." },
 ];
 
 function Services() {
   return (
-    <section className="border-b border-hairline bg-muted">
+    <section className="border-b border-hairline">
       <div className="mx-auto max-w-[1400px] px-6 py-28 lg:px-12 lg:py-40">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="eyebrow">03 — Services</p>
+            <p className="eyebrow">04 — Services</p>
             <h2 className="mt-6 font-display text-4xl leading-tight tracking-tight text-primary sm:text-5xl">
-              Restaurant Construction Services
+              Los Angeles Restaurant<br />Construction Services
             </h2>
           </div>
         </div>
@@ -337,7 +423,7 @@ function Process() {
       <div className="mx-auto max-w-[1400px] px-6 py-28 lg:px-12 lg:py-40">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="eyebrow">04 — Approach</p>
+            <p className="eyebrow">05 — Approach</p>
             <h2 className="mt-6 font-display text-4xl leading-tight tracking-tight text-primary sm:text-5xl">
               Our Approach
             </h2>
@@ -374,10 +460,10 @@ function Process() {
 
 const knownFor = [
   "Cost-conscious planning and execution",
-  "Realistic project scheduling",
-  "Restaurant-specific construction experience",
+  "Realistic, opening-date-driven scheduling",
+  "Restaurant-specific construction experience since 1987",
   "Coordination within active restaurant environments",
-  "Clear communication and accountability",
+  "Clear communication and weekly owner reporting",
   "Focus on operational functionality",
 ];
 
@@ -388,14 +474,14 @@ function Differentiators() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-white/60">
-              05 — Known For
+              06 — Known For
             </p>
             <h2 className="mt-6 font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               Known For.
             </h2>
             <p className="mt-12 max-w-md text-[15px] leading-[1.8] text-white/75">
-              Our reputation is built on transparency, responsiveness, and responsibility
-              throughout every phase of construction.
+              Our reputation in Los Angeles is built on transparency, responsiveness,
+              and accountability through every phase of restaurant construction.
             </p>
           </div>
 
@@ -426,29 +512,30 @@ function FinalCTA() {
   return (
     <section id="consultation" className="border-b border-hairline">
       <div className="mx-auto max-w-3xl px-6 py-32 text-center lg:py-44">
-        <p className="eyebrow">06 — Consultation</p>
+        <p className="eyebrow">07 — Free Estimate</p>
         <h2 className="mt-8 font-display text-4xl leading-[1.05] tracking-tight text-primary sm:text-5xl lg:text-6xl">
-          Planning a Restaurant<br />
-          Build or <span className="italic text-secondary">Remodel?</span>
+          Planning a Los Angeles<br />
+          Restaurant <span className="italic text-secondary">Build?</span>
         </h2>
         <p className="mx-auto mt-10 max-w-xl text-[16px] leading-[1.8] text-foreground/75">
           Whether you're opening a new concept, expanding an existing operation, or
-          planning a renovation, Restaurant Builders provides experienced restaurant
-          construction services throughout Southern California.
+          rolling out a franchise location, Restaurant Builders delivers experienced
+          restaurant construction throughout Los Angeles County and Southern California.
+          Call now for a free estimate.
         </p>
 
         <div className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row">
           <a
-            href="mailto:hello@restaurantbuilders.com"
+            href={PHONE_HREF}
             className="inline-flex items-center justify-center bg-primary px-8 py-4 text-[12px] font-medium uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:bg-secondary"
           >
-            Request a Build Consultation
+            Call {PHONE_DISPLAY} — Free Estimate
           </a>
           <a
-            href="tel:6617775000"
+            href={PHONE_HREF}
             className="text-[12px] font-medium uppercase tracking-[0.18em] text-foreground transition-colors hover:text-secondary"
           >
-            Call 661.777.5000
+            Tap to Call Now
           </a>
         </div>
       </div>
@@ -468,14 +555,14 @@ function Footer() {
               Restaurant Builders
             </p>
             <p className="mt-4 text-sm leading-relaxed text-foreground/70">
-              Southern California<br />
+              Los Angeles<br />
               Restaurant Contractors
             </p>
             <a
-              href="tel:6617775000"
+              href={PHONE_HREF}
               className="mt-6 inline-block text-sm font-medium text-foreground hover:text-secondary"
             >
-              661.777.5000
+              {PHONE_DISPLAY}
             </a>
           </div>
 
@@ -497,8 +584,8 @@ function Footer() {
               Service Areas
             </p>
             <ul className="mt-6 space-y-3 text-sm text-foreground/75">
-              <li>Santa Clarita</li>
               <li>Los Angeles County</li>
+              <li>Santa Clarita</li>
               <li>Ventura County</li>
               <li>Orange County</li>
               <li>Southern California</li>
@@ -509,8 +596,9 @@ function Footer() {
         <div className="mt-20 border-t border-hairline pt-10">
           <p className="max-w-3xl text-[12px] leading-[1.7] text-muted-foreground">
             Restaurant Builders is a service brand operated by Boulder Builders, a
-            licensed and insured California general contractor. All contracts, permits,
-            and construction work are executed by Boulder Builders in accordance with
+            licensed and insured California general contractor building restaurants
+            across Los Angeles County since 1987. All contracts, permits, and
+            construction work are executed by Boulder Builders in accordance with
             California regulations. Learn more at{" "}
             <a
               href="https://boulderbuildersca.com"
