@@ -1,20 +1,29 @@
 import { useState } from "react";
+import mcdonalds from "@/assets/logos/mcdonalds-brand-logo-png-7.png.asset.json";
+import kfc from "@/assets/logos/kfc_PNG12.png.asset.json";
+import wendys from "@/assets/logos/wendys-logo-png_seeklogo-191327.png.asset.json";
+import elPolloLoco from "@/assets/logos/El_Pollo_Loco_Logo.jpg.asset.json";
+import baskin from "@/assets/logos/Baskin-Robbins-Logo.wine.png.asset.json";
+import yogurtland from "@/assets/logos/logo-yogurtland-tagline-large.png.asset.json";
+import togos from "@/assets/logos/Togo_s_Logo.png.asset.json";
+import teleferic from "@/assets/logos/teleferic_brentwood.png.asset.json";
+import royalEgg from "@/assets/logos/the_royal_egg.jpg.asset.json";
+import makenna from "@/assets/logos/main_makenna_logo_1743181988.webp.asset.json";
 
 const PHONE_DISPLAY = "661.777.5000";
 const PHONE_HREF = "tel:6617775000";
 
-const BRANDS: { name: string; domain: string }[] = [
-  { name: "McDonald's", domain: "mcdonalds.com" },
-  { name: "KFC", domain: "kfc.com" },
-  { name: "Wendy's", domain: "wendys.com" },
-  { name: "El Pollo Loco", domain: "elpolloloco.com" },
-  { name: "Baskin-Robbins", domain: "baskinrobbins.com" },
-  { name: "Yogurtland", domain: "yogurtland.com" },
-  { name: "Togo's", domain: "togos.com" },
-  { name: "Pita Pit", domain: "pitapitusa.com" },
-  { name: "Extreme Pita", domain: "extremepita.com" },
-  { name: "Taco Del Mar", domain: "tacodelmar.com" },
-  { name: "Una Mas", domain: "unamas.com" },
+const BRANDS: { name: string; src: string }[] = [
+  { name: "McDonald's", src: mcdonalds.url },
+  { name: "KFC", src: kfc.url },
+  { name: "Wendy's", src: wendys.url },
+  { name: "El Pollo Loco", src: elPolloLoco.url },
+  { name: "Baskin-Robbins", src: baskin.url },
+  { name: "Yogurtland", src: yogurtland.url },
+  { name: "Togo's", src: togos.url },
+  { name: "Telefèric Barcelona", src: teleferic.url },
+  { name: "The Royal Egg Café", src: royalEgg.url },
+  { name: "Makenna Koffee Company", src: makenna.url },
 ];
 
 export default function Home() {
@@ -356,40 +365,22 @@ function LogoMarquee() {
           "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
       }}
     >
-      <div className="flex w-max animate-marquee items-center gap-16 px-8 lg:gap-24">
-        {loop.map((b, i) => {
-          const sources = [
-            `https://www.google.com/s2/favicons?domain=${b.domain}&sz=256`,
-            `https://icons.duckduckgo.com/ip3/${b.domain}.ico`,
-            `https://icon.horse/icon/${b.domain}`,
-          ];
-          return (
-            <div
-              key={`${b.domain}-${i}`}
-              className="flex h-20 w-40 shrink-0 items-center justify-center lg:h-24 lg:w-48"
-              title={b.name}
-            >
-              <img
-                src={sources[0]}
-                data-step="0"
-                alt={`${b.name} logo — restaurant client of Boulder Builders`}
-                className="max-h-full max-w-full select-none object-contain transition-all duration-300"
-                loading="lazy"
-                draggable={false}
-                onError={(e) => {
-                  const t = e.currentTarget;
-                  const step = Number(t.dataset.step ?? "0") + 1;
-                  if (step < sources.length) {
-                    t.dataset.step = String(step);
-                    t.src = sources[step];
-                  } else {
-                    t.outerHTML = `<span class="font-display text-xl tracking-tight text-primary">${b.name}</span>`;
-                  }
-                }}
-              />
-            </div>
-          );
-        })}
+      <div className="flex w-max animate-marquee items-center gap-12 px-8 lg:gap-20">
+        {loop.map((b, i) => (
+          <div
+            key={`${b.name}-${i}`}
+            className="flex h-24 w-44 shrink-0 items-center justify-center lg:h-28 lg:w-52"
+            title={b.name}
+          >
+            <img
+              src={b.src}
+              alt={`${b.name} logo — restaurant client of Boulder Builders`}
+              className="max-h-full max-w-full select-none object-contain"
+              loading="lazy"
+              draggable={false}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
