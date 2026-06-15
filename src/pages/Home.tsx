@@ -345,25 +345,36 @@ function BrandsSection() {
 }
 
 function LogoMarquee() {
+  const loop = [...BRANDS, ...BRANDS];
   return (
     <div
-      className="relative overflow-hidden border-y border-hairline bg-white py-8"
+      className="relative overflow-hidden border-y border-hairline bg-white py-10"
       style={{
         maskImage:
-          "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+          "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
         WebkitMaskImage:
-          "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+          "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
       }}
     >
-      <div className="flex w-max animate-marquee items-center gap-16">
-        {[0, 1].map((dup) => (
-          <img
-            key={dup}
-            src={logosAsset.url}
-            alt="Restaurant brands Boulder Builders has built for, including KFC, McDonald's, Baskin-Robbins, Wendy's, El Pollo Loco, Yogurtland, Togo's, Taco Del Mar, Pita Pit, Extreme Pita, and Una Mas"
-            className="h-32 w-auto select-none object-contain lg:h-40"
-            draggable={false}
-          />
+      <div className="flex w-max animate-marquee items-center gap-16 px-8 lg:gap-24">
+        {loop.map((b, i) => (
+          <div
+            key={`${b.domain}-${i}`}
+            className="flex h-20 w-40 shrink-0 items-center justify-center lg:h-24 lg:w-48"
+            title={b.name}
+          >
+            <img
+              src={`https://logo.clearbit.com/${b.domain}?size=256`}
+              alt={`${b.name} logo — restaurant client of Boulder Builders`}
+              className="max-h-full max-w-full select-none object-contain grayscale-0 transition-all duration-300"
+              loading="lazy"
+              draggable={false}
+              onError={(e) => {
+                const t = e.currentTarget;
+                t.outerHTML = `<span class="font-display text-xl tracking-tight text-primary">${b.name}</span>`;
+              }}
+            />
+          </div>
         ))}
       </div>
     </div>
