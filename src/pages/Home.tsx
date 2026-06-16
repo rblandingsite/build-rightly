@@ -1,29 +1,29 @@
 import { useState } from "react";
-import mcdonalds from "@/assets/logos/mcdonalds-brand-logo-png-7.png.asset.json";
-import kfc from "@/assets/logos/kfc_PNG12.png.asset.json";
-import wendys from "@/assets/logos/wendys-logo-png_seeklogo-191327.png.asset.json";
-import elPolloLoco from "@/assets/logos/El_Pollo_Loco_Logo.jpg.asset.json";
-import baskin from "@/assets/logos/Baskin-Robbins-Logo.wine.png.asset.json";
-import yogurtland from "@/assets/logos/logo-yogurtland-tagline-large.png.asset.json";
-import togos from "@/assets/logos/Togo_s_Logo.png.asset.json";
-import teleferic from "@/assets/logos/teleferic_brentwood.png.asset.json";
-import royalEgg from "@/assets/logos/the_royal_egg.jpg.asset.json";
-import makenna from "@/assets/logos/main_makenna_logo_1743181988.webp.asset.json";
+import mcdonalds from "@/assets/logos/mcdonalds-brand-logo-png-7.png";
+import kfc from "@/assets/logos/kfc_PNG12.png";
+import wendys from "@/assets/logos/wendys-logo-png_seeklogo-191327.png";
+import elPolloLoco from "@/assets/logos/El_Pollo_Loco_Logo.jpg";
+import baskin from "@/assets/logos/Baskin-Robbins-Logo.wine.png";
+import yogurtland from "@/assets/logos/logo-yogurtland-tagline-large.png";
+import togos from "@/assets/logos/Togo_s_Logo.png";
+import teleferic from "@/assets/logos/teleferic_brentwood.png";
+import royalEgg from "@/assets/logos/the_royal_egg.jpg";
+import makenna from "@/assets/logos/main_makenna_logo_1743181988.webp";
 
 const PHONE_DISPLAY = "661.777.5000";
 const PHONE_HREF = "tel:6617775000";
 
 const BRANDS: { name: string; src: string }[] = [
-  { name: "McDonald's", src: mcdonalds.url },
-  { name: "KFC", src: kfc.url },
-  { name: "Wendy's", src: wendys.url },
-  { name: "El Pollo Loco", src: elPolloLoco.url },
-  { name: "Baskin-Robbins", src: baskin.url },
-  { name: "Yogurtland", src: yogurtland.url },
-  { name: "Togo's", src: togos.url },
-  { name: "Telefèric Barcelona", src: teleferic.url },
-  { name: "The Royal Egg Café", src: royalEgg.url },
-  { name: "Makenna Koffee Company", src: makenna.url },
+  { name: "McDonald's", src: mcdonalds },
+  { name: "KFC", src: kfc },
+  { name: "Wendy's", src: wendys },
+  { name: "El Pollo Loco", src: elPolloLoco },
+  { name: "Baskin-Robbins", src: baskin },
+  { name: "Yogurtland", src: yogurtland },
+  { name: "Togo's", src: togos },
+  { name: "Telefèric Barcelona", src: teleferic },
+  { name: "The Royal Egg Café", src: royalEgg },
+  { name: "Makenna Koffee Company", src: makenna },
 ];
 
 export default function Home() {
