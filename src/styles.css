@@ -36,7 +36,7 @@
 }
 
 :root {
-  /* Brand palette — corporate blue + white */
+  /* Brand palette - corporate blue + white */
   --background: oklch(1 0 0);
   --foreground: oklch(0.27 0.03 257);          /* #1F2937 */
   --ink: oklch(0.27 0.03 257);

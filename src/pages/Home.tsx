@@ -115,7 +115,7 @@ function Hero() {
           <div className="mt-12 max-w-xl space-y-5 text-[15px] leading-[1.75] text-foreground/80">
             <p>
               Restaurant Builders is the restaurant-focused division of Boulder
-              Builders — one of the most trusted restaurant construction companies
+              Builders - one of the most trusted restaurant construction companies
               serving Los Angeles County and Southern California. National brands,
               franchise operators, and independent restaurateurs rely on us to deliver
               on schedule and on budget.
@@ -133,7 +133,7 @@ function Hero() {
               href={PHONE_HREF}
               className="inline-flex items-center justify-center bg-primary px-7 py-4 text-[12px] font-medium uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:bg-secondary"
             >
-              Call {PHONE_DISPLAY} — Free Estimate
+              Call {PHONE_DISPLAY} - Free Estimate
             </a>
             <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
               On-Time · On-Budget · Permit Ready
@@ -148,13 +148,13 @@ function Hero() {
                 <p className="eyebrow">Index</p>
                 <ul className="mt-6 space-y-3 text-sm text-foreground/70">
                   {[
-                    "01 — About",
-                    "02 — Capabilities",
-                    "03 — Brands We've Built For",
-                    "04 — Services",
-                    "05 — Approach",
-                    "06 — Known For",
-                    "07 — Free Estimate",
+                    "01 - About",
+                    "02 - Capabilities",
+                    "03 - Brands We've Built For",
+                    "04 - Services",
+                    "05 - Approach",
+                    "06 - Known For",
+                    "07 - Free Estimate",
                   ].map((i) => (
                     <li key={i} className="font-display tracking-tight">
                       {i}
@@ -197,7 +197,7 @@ function VideoSection() {
       <div className="mx-auto max-w-[1400px] px-6 py-24 lg:px-12 lg:py-32">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <p className="eyebrow">01 — About</p>
+            <p className="eyebrow">01 - About</p>
             <h2 className="mt-6 font-display text-4xl leading-tight tracking-tight text-primary sm:text-5xl">
               About Restaurant Builders
             </h2>
@@ -205,7 +205,7 @@ function VideoSection() {
           <div className="space-y-5 text-[15px] leading-[1.75] text-foreground/80 lg:col-span-7 lg:col-start-6">
             <p>
               A short introduction to how we approach restaurant construction in
-              Los Angeles — our team, our process, and what it looks like to
+              Los Angeles - our team, our process, and what it looks like to
               partner with a contractor that builds restaurants for a living.
             </p>
             <p>
@@ -271,7 +271,7 @@ function Authority() {
       <div className="mx-auto max-w-[1400px] px-6 py-28 lg:px-12 lg:py-40">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <p className="eyebrow">02 — Capabilities</p>
+            <p className="eyebrow">02 - Capabilities</p>
             <h2 className="mt-6 font-display text-4xl leading-[1.05] tracking-tight text-primary sm:text-5xl lg:text-6xl">
               Trusted<br />
               Restaurant<br />
@@ -282,7 +282,7 @@ function Authority() {
           <div className="space-y-6 text-[16px] leading-[1.8] text-foreground/80 lg:col-span-6 lg:col-start-7">
             <p>
               As one of the leading restaurant building contractors in Los Angeles
-              County, our project managers are specialists — not generalists. They
+              County, our project managers are specialists - not generalists. They
               understand the realities of restaurant construction: kitchen workflow,
               hood and grease systems, Title 24, ADA, health-department sign-off,
               and the sequencing that keeps an opening date intact.
@@ -314,7 +314,7 @@ function BrandsSection() {
       <div className="mx-auto max-w-[1400px] px-6 py-24 lg:px-12 lg:py-32">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="eyebrow">03 — Brands We've Built For</p>
+            <p className="eyebrow">03 - Brands We've Built For</p>
             <h2 className="mt-6 font-display text-4xl leading-tight tracking-tight text-primary sm:text-5xl">
               Built for Brands That<br />
               <span className="italic text-secondary">Can't Miss a Date.</span>
@@ -374,7 +374,7 @@ function LogoMarquee() {
           >
             <img
               src={b.src}
-              alt={`${b.name} logo — restaurant client of Boulder Builders`}
+              alt={`${b.name} logo - restaurant client of Boulder Builders`}
               className="max-h-full max-w-full select-none object-contain"
               loading="lazy"
               draggable={false}
@@ -403,7 +403,7 @@ function Services() {
       <div className="mx-auto max-w-[1400px] px-6 py-28 lg:px-12 lg:py-40">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="eyebrow">04 — Services</p>
+            <p className="eyebrow">04 - Services</p>
             <h2 className="mt-6 font-display text-4xl leading-tight tracking-tight text-primary sm:text-5xl">
               Los Angeles Restaurant<br />Construction Services
             </h2>
@@ -452,7 +452,7 @@ function Process() {
       <div className="mx-auto max-w-[1400px] px-6 py-28 lg:px-12 lg:py-40">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="eyebrow">05 — Approach</p>
+            <p className="eyebrow">05 - Approach</p>
             <h2 className="mt-6 font-display text-4xl leading-tight tracking-tight text-primary sm:text-5xl">
               Our Approach
             </h2>
@@ -503,7 +503,7 @@ function Differentiators() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-white/60">
-              06 — Known For
+              06 - Known For
             </p>
             <h2 className="mt-6 font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               Known For.
@@ -541,7 +541,7 @@ function FinalCTA() {
   return (
     <section id="consultation" className="border-b border-hairline">
       <div className="mx-auto max-w-3xl px-6 py-32 text-center lg:py-44">
-        <p className="eyebrow">07 — Free Estimate</p>
+        <p className="eyebrow">07 - Free Estimate</p>
         <h2 className="mt-8 font-display text-4xl leading-[1.05] tracking-tight text-primary sm:text-5xl lg:text-6xl">
           Planning a Los Angeles<br />
           Restaurant <span className="italic text-secondary">Build?</span>
@@ -558,7 +558,7 @@ function FinalCTA() {
             href={PHONE_HREF}
             className="inline-flex items-center justify-center bg-primary px-8 py-4 text-[12px] font-medium uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:bg-secondary"
           >
-            Call {PHONE_DISPLAY} — Free Estimate
+            Call {PHONE_DISPLAY} - Free Estimate
           </a>
           <a
             href={PHONE_HREF}
