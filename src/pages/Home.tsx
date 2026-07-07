@@ -89,8 +89,11 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="top" className="relative border-b border-hairline">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 py-24 lg:grid-cols-12 lg:gap-16 lg:px-12 lg:py-36">
+    <section id="top" className="relative overflow-hidden border-b border-hairline">
+      <div className="pointer-events-none absolute inset-0 grid-backdrop opacity-70" aria-hidden />
+      <div className="pointer-events-none absolute inset-0 glow-backdrop" aria-hidden />
+      <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-6 py-24 lg:grid-cols-12 lg:gap-16 lg:px-12 lg:py-36">
+
         <div className="lg:col-span-7">
           <p className="eyebrow">Serving Los Angeles County Since 1987</p>
           <h1 className="mt-8 font-display text-5xl leading-[1.02] tracking-tight text-primary sm:text-6xl lg:text-[80px]">
@@ -100,9 +103,10 @@ function Hero() {
             <br />
             <span className="text-accent">Contractors.</span>
           </h1>
-          <p className="mt-8 max-w-xl font-display text-xl text-accent sm:text-2xl">
+          <p className="mt-8 max-w-xl font-display text-xl font-light tracking-tight text-secondary sm:text-2xl">
             New Restaurant Construction, Remodels &amp; Tenant Improvements
           </p>
+
 
           <div className="mt-10 flex items-center gap-4 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
             <span>Los Angeles</span>
