@@ -98,9 +98,9 @@ function Hero() {
             <br />
             Restaurant
             <br />
-            <span className="italic text-secondary">Contractors.</span>
+            <span className="text-accent">Contractors.</span>
           </h1>
-          <p className="mt-8 max-w-xl font-display text-xl italic text-secondary sm:text-2xl">
+          <p className="mt-8 max-w-xl font-display text-xl text-accent sm:text-2xl">
             New Restaurant Construction, Remodels &amp; Tenant Improvements
           </p>
 
@@ -275,7 +275,7 @@ function Authority() {
             <h2 className="mt-6 font-display text-4xl leading-[1.05] tracking-tight text-primary sm:text-5xl lg:text-6xl">
               Trusted<br />
               Restaurant<br />
-              <span className="italic text-secondary">Builders in LA.</span>
+              <span className="text-accent">Builders in LA.</span>
             </h2>
           </div>
 
@@ -317,7 +317,7 @@ function BrandsSection() {
             <p className="eyebrow">03 - Brands We've Built For</p>
             <h2 className="mt-6 font-display text-4xl leading-tight tracking-tight text-primary sm:text-5xl">
               Built for Brands That<br />
-              <span className="italic text-secondary">Can't Miss a Date.</span>
+              <span className="text-accent">Can't Miss a Date.</span>
             </h2>
           </div>
           <div className="space-y-5 text-[15px] leading-[1.75] text-foreground/80 lg:col-span-6 lg:col-start-7">
@@ -544,7 +544,7 @@ function FinalCTA() {
         <p className="eyebrow">07 - Free Estimate</p>
         <h2 className="mt-8 font-display text-4xl leading-[1.05] tracking-tight text-primary sm:text-5xl lg:text-6xl">
           Planning a Los Angeles<br />
-          Restaurant <span className="italic text-secondary">Build?</span>
+          Restaurant <span className="text-accent">Build?</span>
         </h2>
         <p className="mx-auto mt-10 max-w-xl text-[16px] leading-[1.8] text-foreground/75">
           Whether you're opening a new concept, expanding an existing operation, or
