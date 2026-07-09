@@ -76,9 +76,10 @@ function Header() {
           </a>
           <a
             href={PHONE_HREF}
-            className="inline-flex items-center justify-center bg-primary px-5 py-3 text-[12px] font-medium uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-secondary"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary-foreground shadow-[0_6px_24px_-8px_rgba(11,60,93,0.55)] transition-all hover:bg-secondary hover:shadow-[0_10px_30px_-8px_rgba(11,60,93,0.65)]"
           >
             Call for a Free Estimate
+            <ArrowRight className="h-4 w-4" strokeWidth={2.25} />
           </a>
         </div>
       </div>
