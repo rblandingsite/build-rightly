@@ -137,9 +137,10 @@ function Hero() {
           <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center justify-center bg-primary px-7 py-4 text-[12px] font-medium uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:bg-secondary"
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-primary-foreground shadow-[0_14px_40px_-14px_rgba(11,60,93,0.6)] transition-all hover:bg-secondary hover:shadow-[0_18px_50px_-14px_rgba(11,60,93,0.75)]"
             >
               Call {PHONE_DISPLAY} - Free Estimate
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={2.25} />
             </a>
             <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
               On-Time · On-Budget · Permit Ready
