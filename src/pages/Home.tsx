@@ -419,16 +419,21 @@ function Services() {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-x-16 gap-y-14 md:grid-cols-2 lg:mt-24 lg:gap-y-20">
+        <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-24 lg:gap-8">
           {services.map((s) => (
-            <div key={s.n} className="border-t border-hairline pt-8">
-              <div className="flex items-baseline gap-6">
-                <span className="font-display text-sm tracking-tight text-secondary">{s.n}</span>
-                <h3 className="font-display text-2xl leading-snug tracking-tight text-primary sm:text-[28px]">
+            <div
+              key={s.n}
+              className="group rounded-2xl border border-hairline bg-white p-8 shadow-[0_1px_0_rgba(15,27,61,0.03),0_20px_50px_-30px_rgba(15,27,61,0.25)] transition-all hover:-translate-y-0.5 hover:border-secondary/40 hover:shadow-[0_1px_0_rgba(15,27,61,0.04),0_28px_60px_-28px_rgba(15,27,61,0.35)] lg:p-10"
+            >
+              <div className="flex items-baseline gap-5">
+                <span className="font-display text-4xl font-semibold tracking-tight text-secondary/70 lg:text-5xl">
+                  {s.n}
+                </span>
+                <h3 className="font-display text-2xl font-medium leading-snug tracking-tight text-primary sm:text-[26px]">
                   {s.title}
                 </h3>
               </div>
-              <p className="ml-12 mt-5 max-w-md text-[15px] leading-[1.75] text-foreground/75">
+              <p className="mt-6 text-[15px] leading-[1.75] text-foreground/75">
                 {s.body}
               </p>
             </div>
