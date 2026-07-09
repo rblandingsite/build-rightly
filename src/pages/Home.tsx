@@ -352,9 +352,11 @@ function BrandsSection() {
           </p>
           <a
             href={PHONE_HREF}
-            className="inline-flex items-center justify-center bg-primary px-7 py-4 text-[12px] font-medium uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:bg-secondary"
+            className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-7 py-3.5 text-[12px] font-semibold uppercase tracking-[0.16em] text-primary-foreground shadow-[0_12px_30px_-14px_rgba(11,60,93,0.55)] transition-all hover:bg-secondary hover:shadow-[0_16px_40px_-14px_rgba(11,60,93,0.7)]"
           >
+            <Phone className="h-4 w-4" strokeWidth={2.25} />
             Call {PHONE_DISPLAY}
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={2.25} />
           </a>
         </div>
       </div>
