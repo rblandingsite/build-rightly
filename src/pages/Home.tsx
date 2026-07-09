@@ -368,7 +368,7 @@ function LogoMarquee() {
   const loop = [...BRANDS, ...BRANDS];
   return (
     <div
-      className="relative overflow-hidden border-y border-hairline bg-white py-10"
+      className="relative overflow-hidden rounded-2xl border border-hairline bg-white py-10 shadow-[0_1px_0_rgba(15,27,61,0.03),0_24px_60px_-40px_rgba(15,27,61,0.3)]"
       style={{
         maskImage:
           "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
