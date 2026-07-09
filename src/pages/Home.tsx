@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ArrowRight, Phone } from "lucide-react";
 import mcdonalds from "@/assets/logos/mcdonalds-brand-logo-png-7.png";
 import kfc from "@/assets/logos/kfc_PNG12.png";
 import wendys from "@/assets/logos/wendys-logo-png_seeklogo-191327.png";
