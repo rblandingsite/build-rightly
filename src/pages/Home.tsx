@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ArrowRight, Phone } from "lucide-react";
 import mcdonalds from "@/assets/logos/mcdonalds-brand-logo-png-7.png";
 import kfc from "@/assets/logos/kfc_PNG12.png";
 import wendys from "@/assets/logos/wendys-logo-png_seeklogo-191327.png";
@@ -75,9 +76,10 @@ function Header() {
           </a>
           <a
             href={PHONE_HREF}
-            className="inline-flex items-center justify-center bg-primary px-5 py-3 text-[12px] font-medium uppercase tracking-[0.14em] text-primary-foreground transition-colors hover:bg-secondary"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary-foreground shadow-[0_6px_24px_-8px_rgba(11,60,93,0.55)] transition-all hover:bg-secondary hover:shadow-[0_10px_30px_-8px_rgba(11,60,93,0.65)]"
           >
             Call for a Free Estimate
+            <ArrowRight className="h-4 w-4" strokeWidth={2.25} />
           </a>
         </div>
       </div>
@@ -135,9 +137,10 @@ function Hero() {
           <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center justify-center bg-primary px-7 py-4 text-[12px] font-medium uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:bg-secondary"
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-primary-foreground shadow-[0_14px_40px_-14px_rgba(11,60,93,0.6)] transition-all hover:bg-secondary hover:shadow-[0_18px_50px_-14px_rgba(11,60,93,0.75)]"
             >
               Call {PHONE_DISPLAY} - Free Estimate
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={2.25} />
             </a>
             <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
               On-Time · On-Budget · Permit Ready
@@ -169,16 +172,16 @@ function Hero() {
 
               <div className="space-y-6">
                 <div className="hairline" />
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="rounded-2xl border border-hairline bg-white/60 p-5 shadow-[0_1px_0_rgba(15,27,61,0.04),0_10px_30px_-18px_rgba(15,27,61,0.25)] backdrop-blur">
                     <p className="eyebrow">License</p>
-                    <p className="mt-2 font-display text-lg text-primary">
+                    <p className="mt-3 font-display text-base font-medium leading-tight text-primary">
                       CA General<br />Contractor
                     </p>
                   </div>
-                  <div>
+                  <div className="rounded-2xl border border-hairline bg-white/60 p-5 shadow-[0_1px_0_rgba(15,27,61,0.04),0_10px_30px_-18px_rgba(15,27,61,0.25)] backdrop-blur">
                     <p className="eyebrow">Building Since</p>
-                    <p className="mt-2 font-display text-lg text-primary">
+                    <p className="mt-2 font-display text-5xl font-semibold tracking-tight text-primary">
                       1987
                     </p>
                   </div>
@@ -221,41 +224,43 @@ function VideoSection() {
         </div>
 
         <div className="mt-16 lg:mt-20">
-          <div className="relative aspect-video w-full overflow-hidden bg-primary">
-            {playing ? (
-              <iframe
-                className="h-full w-full"
-                src="https://www.youtube.com/embed/fPEL4lD4ISk?autoplay=1&rel=0"
-                title="About Restaurant Builders"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            ) : (
-              <button
-                type="button"
-                onClick={() => setPlaying(true)}
-                className="group relative flex h-full w-full items-center justify-center bg-primary text-primary-foreground"
-                aria-label="Play company introduction video"
-              >
-                <div
-                  className="absolute inset-0 opacity-30"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(circle at 30% 40%, rgba(255,255,255,0.18), transparent 60%), radial-gradient(circle at 75% 70%, rgba(255,255,255,0.08), transparent 60%)",
-                  }}
+          <div className="rounded-2xl border border-hairline bg-white p-2 shadow-[0_30px_80px_-40px_rgba(15,27,61,0.35)]">
+            <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-primary">
+              {playing ? (
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/fPEL4lD4ISk?autoplay=1&rel=0"
+                  title="About Restaurant Builders"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
-                <div className="relative flex flex-col items-center gap-6">
-                  <span className="flex h-20 w-20 items-center justify-center rounded-full border border-white/40 transition-all group-hover:scale-105 group-hover:border-white">
-                    <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor">
-                      <path d="M0 0 L22 13 L0 26 Z" />
-                    </svg>
-                  </span>
-                  <span className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/80">
-                    Play Introduction · 16:9
-                  </span>
-                </div>
-              </button>
-            )}
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setPlaying(true)}
+                  className="group relative flex h-full w-full items-center justify-center bg-primary text-primary-foreground"
+                  aria-label="Play company introduction video"
+                >
+                  <div
+                    className="absolute inset-0 opacity-30"
+                    style={{
+                      backgroundImage:
+                        "radial-gradient(circle at 30% 40%, rgba(255,255,255,0.18), transparent 60%), radial-gradient(circle at 75% 70%, rgba(255,255,255,0.08), transparent 60%)",
+                    }}
+                  />
+                  <div className="relative flex flex-col items-center gap-6">
+                    <span className="flex h-20 w-20 items-center justify-center rounded-full border border-white/40 transition-all group-hover:scale-105 group-hover:border-white">
+                      <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor">
+                        <path d="M0 0 L22 13 L0 26 Z" />
+                      </svg>
+                    </span>
+                    <span className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/80">
+                      Play Introduction · 16:9
+                    </span>
+                  </div>
+                </button>
+              )}
+            </div>
           </div>
           <div className="mt-4 flex items-center justify-between text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
             <span>Company Introduction</span>
@@ -347,9 +352,11 @@ function BrandsSection() {
           </p>
           <a
             href={PHONE_HREF}
-            className="inline-flex items-center justify-center bg-primary px-7 py-4 text-[12px] font-medium uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:bg-secondary"
+            className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-7 py-3.5 text-[12px] font-semibold uppercase tracking-[0.16em] text-primary-foreground shadow-[0_12px_30px_-14px_rgba(11,60,93,0.55)] transition-all hover:bg-secondary hover:shadow-[0_16px_40px_-14px_rgba(11,60,93,0.7)]"
           >
+            <Phone className="h-4 w-4" strokeWidth={2.25} />
             Call {PHONE_DISPLAY}
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={2.25} />
           </a>
         </div>
       </div>
@@ -361,7 +368,7 @@ function LogoMarquee() {
   const loop = [...BRANDS, ...BRANDS];
   return (
     <div
-      className="relative overflow-hidden border-y border-hairline bg-white py-10"
+      className="relative overflow-hidden rounded-2xl border border-hairline bg-white py-10 shadow-[0_1px_0_rgba(15,27,61,0.03),0_24px_60px_-40px_rgba(15,27,61,0.3)]"
       style={{
         maskImage:
           "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
@@ -414,16 +421,21 @@ function Services() {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-x-16 gap-y-14 md:grid-cols-2 lg:mt-24 lg:gap-y-20">
+        <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-24 lg:gap-8">
           {services.map((s) => (
-            <div key={s.n} className="border-t border-hairline pt-8">
-              <div className="flex items-baseline gap-6">
-                <span className="font-display text-sm tracking-tight text-secondary">{s.n}</span>
-                <h3 className="font-display text-2xl leading-snug tracking-tight text-primary sm:text-[28px]">
+            <div
+              key={s.n}
+              className="group rounded-2xl border border-hairline bg-white p-8 shadow-[0_1px_0_rgba(15,27,61,0.03),0_20px_50px_-30px_rgba(15,27,61,0.25)] transition-all hover:-translate-y-0.5 hover:border-secondary/40 hover:shadow-[0_1px_0_rgba(15,27,61,0.04),0_28px_60px_-28px_rgba(15,27,61,0.35)] lg:p-10"
+            >
+              <div className="flex items-baseline gap-5">
+                <span className="font-display text-4xl font-semibold tracking-tight text-secondary/70 lg:text-5xl">
+                  {s.n}
+                </span>
+                <h3 className="font-display text-2xl font-medium leading-snug tracking-tight text-primary sm:text-[26px]">
                   {s.title}
                 </h3>
               </div>
-              <p className="ml-12 mt-5 max-w-md text-[15px] leading-[1.75] text-foreground/75">
+              <p className="mt-6 text-[15px] leading-[1.75] text-foreground/75">
                 {s.body}
               </p>
             </div>
@@ -463,24 +475,26 @@ function Process() {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4 lg:gap-8">
+        <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4 lg:gap-6">
           {steps.map((s, i) => (
-            <div key={s.n} className="relative">
-              <div className="hairline" />
-              <div className="mt-6">
-                <div className="flex items-center gap-3">
-                  <span className="font-display text-base text-secondary">{s.n}</span>
-                  {i < steps.length - 1 && (
-                    <span className="hidden h-px flex-1 bg-hairline lg:block" />
-                  )}
-                </div>
-                <h3 className="mt-6 font-display text-2xl leading-tight tracking-tight text-primary">
-                  {s.title}
-                </h3>
-                <p className="mt-5 text-[14.5px] leading-[1.75] text-foreground/75">
-                  {s.body}
-                </p>
+            <div
+              key={s.n}
+              className="relative rounded-2xl border border-hairline bg-white p-7 shadow-[0_1px_0_rgba(15,27,61,0.03),0_18px_40px_-28px_rgba(15,27,61,0.25)] transition-all hover:-translate-y-0.5 hover:border-secondary/40"
+            >
+              <div className="flex items-center justify-between">
+                <span className="font-display text-[11px] font-medium uppercase tracking-[0.18em] text-secondary">
+                  {s.n}
+                </span>
+                <span className="font-display text-4xl font-semibold tracking-tight text-primary/10">
+                  0{i + 1}
+                </span>
               </div>
+              <h3 className="mt-6 font-display text-xl font-medium leading-tight tracking-tight text-primary">
+                {s.title}
+              </h3>
+              <p className="mt-4 text-[14.5px] leading-[1.7] text-foreground/75">
+                {s.body}
+              </p>
             </div>
           ))}
         </div>
@@ -560,15 +574,17 @@ function FinalCTA() {
         <div className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row">
           <a
             href={PHONE_HREF}
-            className="inline-flex items-center justify-center bg-primary px-8 py-4 text-[12px] font-medium uppercase tracking-[0.16em] text-primary-foreground transition-colors hover:bg-secondary"
+            className="group inline-flex items-center justify-center gap-3 rounded-full bg-primary px-9 py-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-primary-foreground shadow-[0_16px_40px_-14px_rgba(11,60,93,0.6)] transition-all hover:bg-secondary hover:shadow-[0_20px_50px_-14px_rgba(11,60,93,0.75)]"
           >
             Call {PHONE_DISPLAY} - Free Estimate
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={2.25} />
           </a>
           <a
             href={PHONE_HREF}
-            className="text-[12px] font-medium uppercase tracking-[0.18em] text-foreground transition-colors hover:text-secondary"
+            className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-foreground transition-colors hover:text-secondary"
           >
             Tap to Call Now
+            <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.25} />
           </a>
         </div>
       </div>
