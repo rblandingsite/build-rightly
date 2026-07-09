@@ -172,16 +172,16 @@ function Hero() {
 
               <div className="space-y-6">
                 <div className="hairline" />
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="rounded-2xl border border-hairline bg-white/60 p-5 shadow-[0_1px_0_rgba(15,27,61,0.04),0_10px_30px_-18px_rgba(15,27,61,0.25)] backdrop-blur">
                     <p className="eyebrow">License</p>
-                    <p className="mt-2 font-display text-lg text-primary">
+                    <p className="mt-3 font-display text-base font-medium leading-tight text-primary">
                       CA General<br />Contractor
                     </p>
                   </div>
-                  <div>
+                  <div className="rounded-2xl border border-hairline bg-white/60 p-5 shadow-[0_1px_0_rgba(15,27,61,0.04),0_10px_30px_-18px_rgba(15,27,61,0.25)] backdrop-blur">
                     <p className="eyebrow">Building Since</p>
-                    <p className="mt-2 font-display text-lg text-primary">
+                    <p className="mt-2 font-display text-5xl font-semibold tracking-tight text-primary">
                       1987
                     </p>
                   </div>
