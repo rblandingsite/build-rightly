@@ -224,41 +224,43 @@ function VideoSection() {
         </div>
 
         <div className="mt-16 lg:mt-20">
-          <div className="relative aspect-video w-full overflow-hidden bg-primary">
-            {playing ? (
-              <iframe
-                className="h-full w-full"
-                src="https://www.youtube.com/embed/fPEL4lD4ISk?autoplay=1&rel=0"
-                title="About Restaurant Builders"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            ) : (
-              <button
-                type="button"
-                onClick={() => setPlaying(true)}
-                className="group relative flex h-full w-full items-center justify-center bg-primary text-primary-foreground"
-                aria-label="Play company introduction video"
-              >
-                <div
-                  className="absolute inset-0 opacity-30"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(circle at 30% 40%, rgba(255,255,255,0.18), transparent 60%), radial-gradient(circle at 75% 70%, rgba(255,255,255,0.08), transparent 60%)",
-                  }}
+          <div className="rounded-2xl border border-hairline bg-white p-2 shadow-[0_30px_80px_-40px_rgba(15,27,61,0.35)]">
+            <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-primary">
+              {playing ? (
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/fPEL4lD4ISk?autoplay=1&rel=0"
+                  title="About Restaurant Builders"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
-                <div className="relative flex flex-col items-center gap-6">
-                  <span className="flex h-20 w-20 items-center justify-center rounded-full border border-white/40 transition-all group-hover:scale-105 group-hover:border-white">
-                    <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor">
-                      <path d="M0 0 L22 13 L0 26 Z" />
-                    </svg>
-                  </span>
-                  <span className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/80">
-                    Play Introduction · 16:9
-                  </span>
-                </div>
-              </button>
-            )}
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setPlaying(true)}
+                  className="group relative flex h-full w-full items-center justify-center bg-primary text-primary-foreground"
+                  aria-label="Play company introduction video"
+                >
+                  <div
+                    className="absolute inset-0 opacity-30"
+                    style={{
+                      backgroundImage:
+                        "radial-gradient(circle at 30% 40%, rgba(255,255,255,0.18), transparent 60%), radial-gradient(circle at 75% 70%, rgba(255,255,255,0.08), transparent 60%)",
+                    }}
+                  />
+                  <div className="relative flex flex-col items-center gap-6">
+                    <span className="flex h-20 w-20 items-center justify-center rounded-full border border-white/40 transition-all group-hover:scale-105 group-hover:border-white">
+                      <svg width="22" height="26" viewBox="0 0 22 26" fill="currentColor">
+                        <path d="M0 0 L22 13 L0 26 Z" />
+                      </svg>
+                    </span>
+                    <span className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/80">
+                      Play Introduction · 16:9
+                    </span>
+                  </div>
+                </button>
+              )}
+            </div>
           </div>
           <div className="mt-4 flex items-center justify-between text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
             <span>Company Introduction</span>
