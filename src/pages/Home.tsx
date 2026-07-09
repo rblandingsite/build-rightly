@@ -473,24 +473,26 @@ function Process() {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4 lg:gap-8">
+        <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4 lg:gap-6">
           {steps.map((s, i) => (
-            <div key={s.n} className="relative">
-              <div className="hairline" />
-              <div className="mt-6">
-                <div className="flex items-center gap-3">
-                  <span className="font-display text-base text-secondary">{s.n}</span>
-                  {i < steps.length - 1 && (
-                    <span className="hidden h-px flex-1 bg-hairline lg:block" />
-                  )}
-                </div>
-                <h3 className="mt-6 font-display text-2xl leading-tight tracking-tight text-primary">
-                  {s.title}
-                </h3>
-                <p className="mt-5 text-[14.5px] leading-[1.75] text-foreground/75">
-                  {s.body}
-                </p>
+            <div
+              key={s.n}
+              className="relative rounded-2xl border border-hairline bg-white p-7 shadow-[0_1px_0_rgba(15,27,61,0.03),0_18px_40px_-28px_rgba(15,27,61,0.25)] transition-all hover:-translate-y-0.5 hover:border-secondary/40"
+            >
+              <div className="flex items-center justify-between">
+                <span className="font-display text-[11px] font-medium uppercase tracking-[0.18em] text-secondary">
+                  {s.n}
+                </span>
+                <span className="font-display text-4xl font-semibold tracking-tight text-primary/10">
+                  0{i + 1}
+                </span>
               </div>
+              <h3 className="mt-6 font-display text-xl font-medium leading-tight tracking-tight text-primary">
+                {s.title}
+              </h3>
+              <p className="mt-4 text-[14.5px] leading-[1.7] text-foreground/75">
+                {s.body}
+              </p>
             </div>
           ))}
         </div>
