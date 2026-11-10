@@ -73,7 +73,10 @@ function SectionLink({ id, children, className = "", onNavigate }: { id: string;
   return <a href="#/" className={className} onClick={(event) => {
     event.preventDefault();
     onNavigate?.();
-    document.getElementById(id)?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+    const target = document.getElementById(id);
+    target?.setAttribute("tabindex", "-1");
+    target?.focus({ preventScroll: true });
+    target?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
   }}>{children}</a>;
 }
 
@@ -82,7 +85,7 @@ function CallLink({ children, className = "" }: { children: React.ReactNode; cla
 }
 
 export default function Home() {
-  return <div className="site-shell"><Header /><main id="main-content"><Hero /><VideoSection /><Authority /><BrandsSection /><Services /><Process /><Differentiators /><FinalCTA /></main><Footer /></div>;
+  return <div className="site-shell"><Header /><main id="main-content" tabIndex={-1}><Hero /><VideoSection /><Authority /><BrandsSection /><Services /><Process /><Differentiators /><FinalCTA /></main><Footer /></div>;
 }
 
 function Header() {
